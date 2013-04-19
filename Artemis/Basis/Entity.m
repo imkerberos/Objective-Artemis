@@ -28,15 +28,80 @@
 * or implied, of GAMADU.COM.
 */
 
-@class World;
-@class Entity;
+#import "Entity.h"
+#import "Component.h"
+#import "EntityManager.h"
+#import "World.h"
 
-@interface Manager : NSObject
+@implementation Entity
+
+@synthesize entityId = _entityId;
+@synthesize world = _world;
+@synthesize deleted = _deleted;
+@synthesize entityUuid = _entityUuid;
+
+- (BOOL) enabled
 {
-    World *_world;
+    return NO;
 }
 
--(id) initWithWorld:(World *)world;
--(void) removeEntity:(Entity *)entity;
+- (void) setEnabled: (BOOL) enabled
+{
+
+}
+
+-(id) initWithWorld:(World *)world andId:(NSNumber *)entityId
+{
+    if (self = [super init])
+    {
+        _world = world;
+        _entityManager = [_world entityManager];
+        _entityId = [entityId retain];
+    }
+    return self;
+}
+
+-(void) dealloc
+{
+	[_entityId release];
+
+    [_entityUuid release];
+    [super dealloc];
+}
+
+-(void) addComponent:(Component *)component
+{
+    [_entityManager addComponent:component toEntity:self];
+}
+
+-(BOOL) hasComponent:(Class)componentClass
+{
+    return [self getComponent:componentClass] != nil;
+}
+
+-(void) removeComponent:(Component *)component
+{
+    [_entityManager removeComponent:component fromEntity:self];
+}
+
+-(Component *) getComponent:(Class)componentClass;
+{
+    return [_entityManager getComponentWithClass:componentClass fromEntity:self];
+}
+
+-(NSArray *) getComponents
+{
+	return [_entityManager getComponents:self];
+}
+
+-(void) refresh
+{
+    [_world refreshEntity:self];
+}
+
+-(void) deleteEntity
+{
+    [_world deleteEntity:self];
+}
 
 @end

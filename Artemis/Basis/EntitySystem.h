@@ -28,29 +28,37 @@
 * or implied, of GAMADU.COM.
 */
 
-@class Component;
-@class EntityManager;
+@class Entity;
 @class World;
 
-@interface Entity : NSObject
+@interface EntitySystem : NSObject
 {
-    NSNumber *_entityId;
-    World *_world;
-    EntityManager *_entityManager;
-    BOOL _deleted;
+	World *_world;
+    NSMutableArray *_entities;
+	BOOL _active;
+
+    BOOL _passive;
+    BOOL _dummy;
 }
 
-@property (nonatomic, retain) NSNumber *entityId;
-@property (nonatomic, readonly) World *world;
-@property (nonatomic) BOOL deleted;
+@property (nonatomic, assign) World *world;
+@property (nonatomic, readonly) BOOL active;
 
--(id) initWithWorld:(World *)world andId:(NSNumber *)entityId;
--(void) addComponent:(Component *)component;
--(BOOL) hasComponent:(Class)componentClass;
--(void) removeComponent:(Component *)component;
--(Component *) getComponent:(Class)componentClass;
--(NSArray *) getComponents;
--(void) refresh;
--(void) deleteEntity;
++(id) system;
+
+-(void) initialise;
+-(void) begin;
+-(void) end;
+-(void) process;
+-(void) processEntities:(NSArray *)entities;
+-(void) processEntity:(Entity *)entity;
+-(void) entityAdded:(Entity *)entity;
+-(void) entityRemoved:(Entity *)entity;
+-(void) entityChanged:(Entity *)entity;
+-(BOOL) shouldContainEntity:(Entity *)entity;
+-(void) removeEntity:(Entity *)entity;
+-(BOOL) hasEntity:(Entity *)entity;
+-(void) deactivate;
+-(void) activate;
 
 @end

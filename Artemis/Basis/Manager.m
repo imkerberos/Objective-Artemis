@@ -28,31 +28,42 @@
 * or implied, of GAMADU.COM.
 */
 
-@class Entity;
-@class EntityManager;
-@class Manager;
-@class SystemManager;
+#import "Manager.h"
+#import "Entity.h"
+#import "World.h"
 
-@interface World : NSObject
+@implementation Manager
+
+-(id) initWithWorld:(World *)world
 {
-	NSMutableDictionary *_managersByClass;
-    
-    int _delta;
-    
-    NSMutableArray *_refreshed;
-    NSMutableArray *_deleted;
+    if (self = [super init])
+    {
+        _world = world;
+    }
+    return self;
 }
 
-@property (nonatomic) int delta;
+-(void) removeEntity:(Entity *)entity
+{
+}
 
--(void) setManager:(Manager *)manager;
--(Manager *) getManager:(Class)managerClass;
--(EntityManager *)entityManager;
--(SystemManager *)systemManager;
--(void) deleteEntity:(Entity *)entity;
--(void) refreshEntity:(Entity *)entity;
--(Entity *) createEntity;
--(Entity *) getEntity:(NSNumber *) entityId;
--(void) loopStart;
+- (void) entityAdded: (Entity*) entity
+{
+}
 
+- (void) entityChanged: (Entity*) entity
+{
+}
+
+- (void) entityDeleted: (Entity*) entity
+{
+}
+
+- (void) entityEnabled: (Entity*) entity
+{
+}
+
+- (void) entityDisabled: (Entity*) entity
+{
+}
 @end

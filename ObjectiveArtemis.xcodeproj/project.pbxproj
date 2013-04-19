@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1210300B4442BF2012D238CE /* EntityComponentSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12103B893CDAEFE89B1EFEB9 /* EntityComponentSystem.m */; };
+		12103025D62060F167C2323B /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = 12103CC224B7C769B7A3B038 /* World.m */; };
+		121030CFF5048F86B709BCEC /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 121039D84CBA1EECA5C5C52D /* Component.m */; };
+		121032073E15A22DB4730879 /* Aspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 121038F6C79E16E62CA610CC /* Aspect.m */; };
+		12103475B8A2400693D8A248 /* TagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12103B42D95E4C51A5783DC2 /* TagManager.m */; };
+		121035C30E69E67FA2001AC8 /* DelayedEntityProcessingSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12103AFA336130AB5B727EB2 /* DelayedEntityProcessingSystem.m */; };
+		121035EF290A6968405C0CA8 /* ComponentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 121039D6DA89D9AA5ED19C18 /* ComponentManager.m */; };
+		121036230D2F7D02AFCF3DC4 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12103C47F9A6077A7D087CBA /* Manager.m */; };
+		12103797FE07A27B2B4B55EF /* GroupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210340F854726179FA8E67D /* GroupManager.m */; };
+		121037B788C6B9CF06618D94 /* TagEntitySystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 121031C64C7138B54FD7C78D /* TagEntitySystem.m */; };
+		1210382B3F61C7F4D972CFA4 /* IntervalEntitySystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12103B28BC526D13E4548BBD /* IntervalEntitySystem.m */; };
+		121038C4518D136EE800260D /* TeamManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12103E5C156C8DF486F4FB28 /* TeamManager.m */; };
+		121038E101FCE211C0FA4F4F /* EntityProcessingSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210373A7C61AEE6A13644B2 /* EntityProcessingSystem.m */; };
+		1210391DEED212782DC48FD8 /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210367EE846F8DF24150759 /* PlayerManager.m */; };
+		12103939577ABC1ABCBE490A /* LabelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 121031335DA44A5EE6A2AE10 /* LabelManager.m */; };
+		12103A4F05760BAB6BC66346 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210361C2FA055913497042C /* Entity.m */; };
+		12103B2C842F4E0183E91E75 /* ComponentMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 12103EF099E6F7461F59BD24 /* ComponentMapper.m */; };
+		12103D6C128F5BCA1BA00EA4 /* IntervalEntityProcessingSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12103DAE89F3014A61732BE2 /* IntervalEntityProcessingSystem.m */; };
+		12103E81065B4903A9D13514 /* EntitySystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 121037763001708AFAA76FF7 /* EntitySystem.m */; };
+		12103EE344468BF4B7881A83 /* SystemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210362A71D5803BFF34D241 /* SystemManager.m */; };
+		12103F608D3DC2743FE36E9D /* EntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 121038199063F9F0A4A785EA /* EntityManager.m */; };
+		12103FF45982081634998C98 /* GroupEntitySystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12103BA750FAAD30C87F4AC9 /* GroupEntitySystem.m */; };
 		3FF7D943172198820034267F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FF7D942172198820034267F /* UIKit.framework */; };
 		3FF7D945172198820034267F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FF7D944172198820034267F /* Foundation.framework */; };
 		3FF7D947172198820034267F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FF7D946172198820034267F /* CoreGraphics.framework */; };
@@ -16,23 +38,54 @@
 		3FF7D955172198820034267F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF7D954172198820034267F /* Default.png */; };
 		3FF7D957172198820034267F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF7D956172198820034267F /* Default@2x.png */; };
 		3FF7D959172198820034267F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF7D958172198820034267F /* Default-568h@2x.png */; };
-		3FF7D97D1721992C0034267F /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D9621721992C0034267F /* Component.m */; };
-		3FF7D97E1721992C0034267F /* ComponentMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D9641721992C0034267F /* ComponentMapper.m */; };
-		3FF7D97F1721992C0034267F /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D9661721992C0034267F /* Entity.m */; };
-		3FF7D9801721992C0034267F /* EntityComponentSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D9681721992C0034267F /* EntityComponentSystem.m */; };
-		3FF7D9811721992C0034267F /* EntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D96A1721992C0034267F /* EntityManager.m */; };
-		3FF7D9821721992C0034267F /* EntitySystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D96C1721992C0034267F /* EntitySystem.m */; };
-		3FF7D9831721992C0034267F /* GroupEntitySystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D96E1721992C0034267F /* GroupEntitySystem.m */; };
-		3FF7D9841721992C0034267F /* GroupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D9701721992C0034267F /* GroupManager.m */; };
-		3FF7D9851721992C0034267F /* LabelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D9721721992C0034267F /* LabelManager.m */; };
-		3FF7D9861721992C0034267F /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D9741721992C0034267F /* Manager.m */; };
-		3FF7D9871721992C0034267F /* SystemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D9761721992C0034267F /* SystemManager.m */; };
-		3FF7D9881721992C0034267F /* TagEntitySystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D9781721992C0034267F /* TagEntitySystem.m */; };
-		3FF7D9891721992C0034267F /* TagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D97A1721992C0034267F /* TagManager.m */; };
-		3FF7D98A1721992C0034267F /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7D97C1721992C0034267F /* World.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		121031335DA44A5EE6A2AE10 /* LabelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelManager.m; sourceTree = "<group>"; };
+		1210316E8B90D17F1169E776 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		12103177EF7216C64B825D70 /* TagManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagManager.h; sourceTree = "<group>"; };
+		121031C64C7138B54FD7C78D /* TagEntitySystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagEntitySystem.m; sourceTree = "<group>"; };
+		12103258E59BA14EB10899FA /* IntervalEntitySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalEntitySystem.h; sourceTree = "<group>"; };
+		121032B9A92FF41F84401FCD /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		1210332CEA9AA6A04C214545 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		1210333C452CD9739EBD68DC /* EntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
+		1210334E06A45FC9C470ADC5 /* TagEntitySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagEntitySystem.h; sourceTree = "<group>"; };
+		121033B8924774F12123454C /* EntityProcessingSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProcessingSystem.h; sourceTree = "<group>"; };
+		1210340F854726179FA8E67D /* GroupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupManager.m; sourceTree = "<group>"; };
+		12103485F8CE57DD212951DA /* GroupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupManager.h; sourceTree = "<group>"; };
+		12103487DC7211EB50770130 /* TeamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamManager.h; sourceTree = "<group>"; };
+		1210361C2FA055913497042C /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		1210362A71D5803BFF34D241 /* SystemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemManager.m; sourceTree = "<group>"; };
+		12103657C464757C073D4B95 /* IntervalEntityProcessingSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalEntityProcessingSystem.h; sourceTree = "<group>"; };
+		1210367EE846F8DF24150759 /* PlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
+		121037027AE026768A911F26 /* SystemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemManager.h; sourceTree = "<group>"; };
+		1210371A529A3AB1E4ACC351 /* ComponentMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentMapper.h; sourceTree = "<group>"; };
+		1210373A7C61AEE6A13644B2 /* EntityProcessingSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProcessingSystem.m; sourceTree = "<group>"; };
+		12103773F4889085254D0825 /* Aspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspect.h; sourceTree = "<group>"; };
+		121037763001708AFAA76FF7 /* EntitySystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntitySystem.m; sourceTree = "<group>"; };
+		121037A45F8556A1AA1F4273 /* EntityDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityDelegate.h; sourceTree = "<group>"; };
+		12103811FF3A374F30A8FB7D /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		121038199063F9F0A4A785EA /* EntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityManager.m; sourceTree = "<group>"; };
+		121038A16760B4B245A7DBD2 /* EntitySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntitySystem.h; sourceTree = "<group>"; };
+		121038F6C79E16E62CA610CC /* Aspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspect.m; sourceTree = "<group>"; };
+		12103921C5B6718DC5FB6DA3 /* LabelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelManager.h; sourceTree = "<group>"; };
+		121039D6DA89D9AA5ED19C18 /* ComponentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentManager.m; sourceTree = "<group>"; };
+		121039D84CBA1EECA5C5C52D /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
+		12103A21B10E16BCEDEC5569 /* DelayedEntityProcessingSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelayedEntityProcessingSystem.h; sourceTree = "<group>"; };
+		12103AFA336130AB5B727EB2 /* DelayedEntityProcessingSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelayedEntityProcessingSystem.m; sourceTree = "<group>"; };
+		12103B28BC526D13E4548BBD /* IntervalEntitySystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalEntitySystem.m; sourceTree = "<group>"; };
+		12103B42D95E4C51A5783DC2 /* TagManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagManager.m; sourceTree = "<group>"; };
+		12103B804CF0B4D61A718DD1 /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
+		12103B893CDAEFE89B1EFEB9 /* EntityComponentSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityComponentSystem.m; sourceTree = "<group>"; };
+		12103BA750FAAD30C87F4AC9 /* GroupEntitySystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupEntitySystem.m; sourceTree = "<group>"; };
+		12103C47F9A6077A7D087CBA /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		12103CC224B7C769B7A3B038 /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = World.m; sourceTree = "<group>"; };
+		12103D5CAC321E81BC469586 /* GroupEntitySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupEntitySystem.h; sourceTree = "<group>"; };
+		12103DAE89F3014A61732BE2 /* IntervalEntityProcessingSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalEntityProcessingSystem.m; sourceTree = "<group>"; };
+		12103E556359325463A8CC03 /* EntityComponentSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityComponentSystem.h; sourceTree = "<group>"; };
+		12103E5C156C8DF486F4FB28 /* TeamManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamManager.m; sourceTree = "<group>"; };
+		12103EF099E6F7461F59BD24 /* ComponentMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentMapper.m; sourceTree = "<group>"; };
+		12103F26E13F571454E5B912 /* ComponentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentManager.h; sourceTree = "<group>"; };
 		3FF7D93F172198820034267F /* ObjectiveArtemis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveArtemis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF7D942172198820034267F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3FF7D944172198820034267F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,34 +100,6 @@
 		3FF7D956172198820034267F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3FF7D958172198820034267F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3FF7D9601721992C0034267F /* artemis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = artemis.h; sourceTree = "<group>"; };
-		3FF7D9611721992C0034267F /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
-		3FF7D9621721992C0034267F /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
-		3FF7D9631721992C0034267F /* ComponentMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentMapper.h; sourceTree = "<group>"; };
-		3FF7D9641721992C0034267F /* ComponentMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentMapper.m; sourceTree = "<group>"; };
-		3FF7D9651721992C0034267F /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
-		3FF7D9661721992C0034267F /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
-		3FF7D9671721992C0034267F /* EntityComponentSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityComponentSystem.h; sourceTree = "<group>"; };
-		3FF7D9681721992C0034267F /* EntityComponentSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityComponentSystem.m; sourceTree = "<group>"; };
-		3FF7D9691721992C0034267F /* EntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
-		3FF7D96A1721992C0034267F /* EntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityManager.m; sourceTree = "<group>"; };
-		3FF7D96B1721992C0034267F /* EntitySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntitySystem.h; sourceTree = "<group>"; };
-		3FF7D96C1721992C0034267F /* EntitySystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntitySystem.m; sourceTree = "<group>"; };
-		3FF7D96D1721992C0034267F /* GroupEntitySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupEntitySystem.h; sourceTree = "<group>"; };
-		3FF7D96E1721992C0034267F /* GroupEntitySystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupEntitySystem.m; sourceTree = "<group>"; };
-		3FF7D96F1721992C0034267F /* GroupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupManager.h; sourceTree = "<group>"; };
-		3FF7D9701721992C0034267F /* GroupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupManager.m; sourceTree = "<group>"; };
-		3FF7D9711721992C0034267F /* LabelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelManager.h; sourceTree = "<group>"; };
-		3FF7D9721721992C0034267F /* LabelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelManager.m; sourceTree = "<group>"; };
-		3FF7D9731721992C0034267F /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
-		3FF7D9741721992C0034267F /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
-		3FF7D9751721992C0034267F /* SystemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemManager.h; sourceTree = "<group>"; };
-		3FF7D9761721992C0034267F /* SystemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemManager.m; sourceTree = "<group>"; };
-		3FF7D9771721992C0034267F /* TagEntitySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagEntitySystem.h; sourceTree = "<group>"; };
-		3FF7D9781721992C0034267F /* TagEntitySystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagEntitySystem.m; sourceTree = "<group>"; };
-		3FF7D9791721992C0034267F /* TagManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagManager.h; sourceTree = "<group>"; };
-		3FF7D97A1721992C0034267F /* TagManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagManager.m; sourceTree = "<group>"; };
-		3FF7D97B1721992C0034267F /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
-		3FF7D97C1721992C0034267F /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = World.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,37 +171,78 @@
 		3FF7D95F1721992C0034267F /* Artemis */ = {
 			isa = PBXGroup;
 			children = (
+				3FF7D98B17219B820034267F /* Basis */,
+				3FF7D98C17219B820034267F /* Managers */,
+				3FF7D98D17219B820034267F /* Systems */,
 				3FF7D9601721992C0034267F /* artemis.h */,
-				3FF7D9611721992C0034267F /* Component.h */,
-				3FF7D9621721992C0034267F /* Component.m */,
-				3FF7D9631721992C0034267F /* ComponentMapper.h */,
-				3FF7D9641721992C0034267F /* ComponentMapper.m */,
-				3FF7D9651721992C0034267F /* Entity.h */,
-				3FF7D9661721992C0034267F /* Entity.m */,
-				3FF7D9671721992C0034267F /* EntityComponentSystem.h */,
-				3FF7D9681721992C0034267F /* EntityComponentSystem.m */,
-				3FF7D9691721992C0034267F /* EntityManager.h */,
-				3FF7D96A1721992C0034267F /* EntityManager.m */,
-				3FF7D96B1721992C0034267F /* EntitySystem.h */,
-				3FF7D96C1721992C0034267F /* EntitySystem.m */,
-				3FF7D96D1721992C0034267F /* GroupEntitySystem.h */,
-				3FF7D96E1721992C0034267F /* GroupEntitySystem.m */,
-				3FF7D96F1721992C0034267F /* GroupManager.h */,
-				3FF7D9701721992C0034267F /* GroupManager.m */,
-				3FF7D9711721992C0034267F /* LabelManager.h */,
-				3FF7D9721721992C0034267F /* LabelManager.m */,
-				3FF7D9731721992C0034267F /* Manager.h */,
-				3FF7D9741721992C0034267F /* Manager.m */,
-				3FF7D9751721992C0034267F /* SystemManager.h */,
-				3FF7D9761721992C0034267F /* SystemManager.m */,
-				3FF7D9771721992C0034267F /* TagEntitySystem.h */,
-				3FF7D9781721992C0034267F /* TagEntitySystem.m */,
-				3FF7D9791721992C0034267F /* TagManager.h */,
-				3FF7D97A1721992C0034267F /* TagManager.m */,
-				3FF7D97B1721992C0034267F /* World.h */,
-				3FF7D97C1721992C0034267F /* World.m */,
 			);
 			path = Artemis;
+			sourceTree = "<group>";
+		};
+		3FF7D98B17219B820034267F /* Basis */ = {
+			isa = PBXGroup;
+			children = (
+				1210316E8B90D17F1169E776 /* Component.h */,
+				12103811FF3A374F30A8FB7D /* World.h */,
+				1210361C2FA055913497042C /* Entity.m */,
+				12103CC224B7C769B7A3B038 /* World.m */,
+				121037763001708AFAA76FF7 /* EntitySystem.m */,
+				1210371A529A3AB1E4ACC351 /* ComponentMapper.h */,
+				1210332CEA9AA6A04C214545 /* Entity.h */,
+				121039D84CBA1EECA5C5C52D /* Component.m */,
+				12103EF099E6F7461F59BD24 /* ComponentMapper.m */,
+				121038A16760B4B245A7DBD2 /* EntitySystem.h */,
+				121032B9A92FF41F84401FCD /* Manager.h */,
+				12103C47F9A6077A7D087CBA /* Manager.m */,
+				121038F6C79E16E62CA610CC /* Aspect.m */,
+				12103773F4889085254D0825 /* Aspect.h */,
+				121037A45F8556A1AA1F4273 /* EntityDelegate.h */,
+				121038199063F9F0A4A785EA /* EntityManager.m */,
+				1210333C452CD9739EBD68DC /* EntityManager.h */,
+				121037027AE026768A911F26 /* SystemManager.h */,
+				1210362A71D5803BFF34D241 /* SystemManager.m */,
+				121039D6DA89D9AA5ED19C18 /* ComponentManager.m */,
+				12103F26E13F571454E5B912 /* ComponentManager.h */,
+			);
+			path = Basis;
+			sourceTree = "<group>";
+		};
+		3FF7D98C17219B820034267F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				12103485F8CE57DD212951DA /* GroupManager.h */,
+				12103B42D95E4C51A5783DC2 /* TagManager.m */,
+				121031335DA44A5EE6A2AE10 /* LabelManager.m */,
+				1210340F854726179FA8E67D /* GroupManager.m */,
+				12103921C5B6718DC5FB6DA3 /* LabelManager.h */,
+				12103177EF7216C64B825D70 /* TagManager.h */,
+				1210367EE846F8DF24150759 /* PlayerManager.m */,
+				12103B804CF0B4D61A718DD1 /* PlayerManager.h */,
+				12103E5C156C8DF486F4FB28 /* TeamManager.m */,
+				12103487DC7211EB50770130 /* TeamManager.h */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3FF7D98D17219B820034267F /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				12103B893CDAEFE89B1EFEB9 /* EntityComponentSystem.m */,
+				12103E556359325463A8CC03 /* EntityComponentSystem.h */,
+				12103D5CAC321E81BC469586 /* GroupEntitySystem.h */,
+				12103BA750FAAD30C87F4AC9 /* GroupEntitySystem.m */,
+				121031C64C7138B54FD7C78D /* TagEntitySystem.m */,
+				1210334E06A45FC9C470ADC5 /* TagEntitySystem.h */,
+				12103AFA336130AB5B727EB2 /* DelayedEntityProcessingSystem.m */,
+				12103A21B10E16BCEDEC5569 /* DelayedEntityProcessingSystem.h */,
+				1210373A7C61AEE6A13644B2 /* EntityProcessingSystem.m */,
+				121033B8924774F12123454C /* EntityProcessingSystem.h */,
+				12103B28BC526D13E4548BBD /* IntervalEntitySystem.m */,
+				12103258E59BA14EB10899FA /* IntervalEntitySystem.h */,
+				12103DAE89F3014A61732BE2 /* IntervalEntityProcessingSystem.m */,
+				12103657C464757C073D4B95 /* IntervalEntityProcessingSystem.h */,
+			);
+			path = Systems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,20 +312,28 @@
 			files = (
 				3FF7D94F172198820034267F /* main.m in Sources */,
 				3FF7D953172198820034267F /* AppDelegate.m in Sources */,
-				3FF7D97D1721992C0034267F /* Component.m in Sources */,
-				3FF7D97E1721992C0034267F /* ComponentMapper.m in Sources */,
-				3FF7D97F1721992C0034267F /* Entity.m in Sources */,
-				3FF7D9801721992C0034267F /* EntityComponentSystem.m in Sources */,
-				3FF7D9811721992C0034267F /* EntityManager.m in Sources */,
-				3FF7D9821721992C0034267F /* EntitySystem.m in Sources */,
-				3FF7D9831721992C0034267F /* GroupEntitySystem.m in Sources */,
-				3FF7D9841721992C0034267F /* GroupManager.m in Sources */,
-				3FF7D9851721992C0034267F /* LabelManager.m in Sources */,
-				3FF7D9861721992C0034267F /* Manager.m in Sources */,
-				3FF7D9871721992C0034267F /* SystemManager.m in Sources */,
-				3FF7D9881721992C0034267F /* TagEntitySystem.m in Sources */,
-				3FF7D9891721992C0034267F /* TagManager.m in Sources */,
-				3FF7D98A1721992C0034267F /* World.m in Sources */,
+				12103A4F05760BAB6BC66346 /* Entity.m in Sources */,
+				12103025D62060F167C2323B /* World.m in Sources */,
+				12103E81065B4903A9D13514 /* EntitySystem.m in Sources */,
+				121030CFF5048F86B709BCEC /* Component.m in Sources */,
+				12103B2C842F4E0183E91E75 /* ComponentMapper.m in Sources */,
+				12103475B8A2400693D8A248 /* TagManager.m in Sources */,
+				12103939577ABC1ABCBE490A /* LabelManager.m in Sources */,
+				12103797FE07A27B2B4B55EF /* GroupManager.m in Sources */,
+				121036230D2F7D02AFCF3DC4 /* Manager.m in Sources */,
+				1210300B4442BF2012D238CE /* EntityComponentSystem.m in Sources */,
+				12103FF45982081634998C98 /* GroupEntitySystem.m in Sources */,
+				121037B788C6B9CF06618D94 /* TagEntitySystem.m in Sources */,
+				121032073E15A22DB4730879 /* Aspect.m in Sources */,
+				12103F608D3DC2743FE36E9D /* EntityManager.m in Sources */,
+				12103EE344468BF4B7881A83 /* SystemManager.m in Sources */,
+				121035EF290A6968405C0CA8 /* ComponentManager.m in Sources */,
+				1210391DEED212782DC48FD8 /* PlayerManager.m in Sources */,
+				121038C4518D136EE800260D /* TeamManager.m in Sources */,
+				121035C30E69E67FA2001AC8 /* DelayedEntityProcessingSystem.m in Sources */,
+				121038E101FCE211C0FA4F4F /* EntityProcessingSystem.m in Sources */,
+				1210382B3F61C7F4D972CFA4 /* IntervalEntitySystem.m in Sources */,
+				12103D6C128F5BCA1BA00EA4 /* IntervalEntityProcessingSystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

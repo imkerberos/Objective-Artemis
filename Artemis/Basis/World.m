@@ -36,6 +36,23 @@
 #import "SystemManager.h"
 #import "TagManager.h"
 
+@interface World (Private)
+- (void) notifyManagers;
+- (void) notifySystems;
+@end
+
+@implementation World (Private)
+- (void) notifyManagers
+{
+
+}
+
+- (void) notifySystems
+{
+
+}
+@end
+
 @implementation World
 
 @synthesize delta = _delta;
@@ -63,6 +80,12 @@
 		
         _refreshed = [[NSMutableArray alloc] init];
         _deleted = [[NSMutableArray alloc] init];
+
+        _addedEntities = [[NSMutableArray alloc] init];
+        _changedEntities = [[NSMutableArray alloc] init];
+        _deletedEntities = [[NSMutableArray alloc] init];
+        _enabledEntities = [[NSMutableArray alloc] init];
+        _disabledEntities = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -70,7 +93,12 @@
 -(void) dealloc
 {
 	[_managersByClass release];
-    
+
+    [_disabledEntities release];
+    [_enabledEntities release];
+    [_deletedEntities release];
+    [_changedEntities release];
+    [_addedEntities release];
     [_refreshed release];
     [_deleted release];
     

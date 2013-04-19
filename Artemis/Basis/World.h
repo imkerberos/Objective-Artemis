@@ -28,23 +28,54 @@
 * or implied, of GAMADU.COM.
 */
 
-#import "Manager.h"
-#import "Entity.h"
-#import "World.h"
+@class Entity;
+@class EntityManager;
+@class Manager;
+@class SystemManager;
 
-@implementation Manager
-
--(id) initWithWorld:(World *)world
+@interface World : NSObject
 {
-    if (self = [super init])
-    {
-        _world = world;
-    }
-    return self;
+    NSMutableDictionary* _managersByClass;
+    NSMutableArray* _managers;
+    NSMutableDictionary* _systemsByClass;
+    NSMutableArray* _systems;
+
+    CGFloat _delta;
+
+    NSMutableArray* _refreshed;
+    NSMutableArray* _deleted;
+    NSMutableArray* _addedEntities;
+    NSMutableArray* _changedEntities;
+    NSMutableArray* _deletedEntities;
+    NSMutableArray* _enabledEntities;
+    NSMutableArray* _disabledEntities;
 }
 
--(void) removeEntity:(Entity *)entity
-{
-}
+@property (nonatomic, assign) CGFloat delta;
 
+- (void) setManager: (Manager*) manager;
+
+- (Manager*) getManager: (Class) managerClass;
+
+- (EntityManager*) entityManager;
+
+- (SystemManager*) systemManager;
+
+- (void) addEntity: (Entity*) entity;
+
+- (void) deleteEntity: (Entity*) entity;
+
+- (void) refreshEntity: (Entity*) entity;
+
+- (void) enableEntity: (Entity*) entity;
+
+- (void) disableEntity: (Entity*) entity;
+
+- (Entity*) createEntity;
+
+- (Entity*) getEntity: (NSNumber*) entityId;
+
+- (void) loopStart;
+
+- (void) process;
 @end

@@ -28,34 +28,17 @@
 * or implied, of GAMADU.COM.
 */
 
-@class Entity;
-@class World;
+#import "EntityDelegate.h"
 
-@interface EntitySystem : NSObject
+@class World;
+@class Entity;
+
+@interface Manager : NSObject <EntityDelegate>
 {
-	World *_world;
-    NSMutableArray *_entities;
-	BOOL _active;
+    World *_world;
 }
 
-@property (nonatomic, assign) World *world;
-@property (nonatomic, readonly) BOOL active;
-
-+(id) system;
-
--(void) initialise;
--(void) begin;
--(void) end;
--(void) process;
--(void) processEntities:(NSArray *)entities;
--(void) processEntity:(Entity *)entity;
--(void) entityAdded:(Entity *)entity;
--(void) entityRemoved:(Entity *)entity;
--(void) entityChanged:(Entity *)entity;
--(BOOL) shouldContainEntity:(Entity *)entity;
+-(id) initWithWorld:(World *)world;
 -(void) removeEntity:(Entity *)entity;
--(BOOL) hasEntity:(Entity *)entity;
--(void) deactivate;
--(void) activate;
 
 @end

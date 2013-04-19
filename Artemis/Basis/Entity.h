@@ -28,68 +28,32 @@
 * or implied, of GAMADU.COM.
 */
 
-#import "Entity.h"
-#import "Component.h"
-#import "EntityManager.h"
-#import "World.h"
+@class Component;
+@class EntityManager;
+@class World;
 
-@implementation Entity
-
-@synthesize entityId = _entityId;
-@synthesize world = _world;
-@synthesize deleted = _deleted;
-
--(id) initWithWorld:(World *)world andId:(NSNumber *)entityId
+@interface Entity : NSObject
 {
-    if (self = [super init])
-    {
-        _world = world;
-        _entityManager = [_world entityManager];
-        _entityId = [entityId retain];
-    }
-    return self;
+    NSString* _entityUuid;
+    NSNumber *_entityId;
+    World *_world;
+    EntityManager *_entityManager;
+    BOOL _deleted;
 }
 
--(void) dealloc
-{
-	[_entityId release];
-	
-	[super dealloc];
-}
+@property (nonatomic, copy) NSString* entityUuid;
+@property (nonatomic, retain) NSNumber *entityId;
+@property (nonatomic, readonly) World *world;
+@property (nonatomic) BOOL deleted;
+@property (nonatomic, assign) BOOL enabled;
 
--(void) addComponent:(Component *)component
-{
-    [_entityManager addComponent:component toEntity:self];
-}
-
--(BOOL) hasComponent:(Class)componentClass
-{
-    return [self getComponent:componentClass] != nil;
-}
-
--(void) removeComponent:(Component *)component
-{
-    [_entityManager removeComponent:component fromEntity:self];
-}
-
+-(id) initWithWorld:(World *)world andId:(NSNumber *)entityId;
+-(void) addComponent:(Component *)component;
+-(BOOL) hasComponent:(Class)componentClass;
+-(void) removeComponent:(Component *)component;
 -(Component *) getComponent:(Class)componentClass;
-{
-    return [_entityManager getComponentWithClass:componentClass fromEntity:self];
-}
-
--(NSArray *) getComponents
-{
-	return [_entityManager getComponents:self];
-}
-
--(void) refresh
-{
-    [_world refreshEntity:self];
-}
-
--(void) deleteEntity
-{
-    [_world deleteEntity:self];
-}
+-(NSArray *) getComponents;
+-(void) refresh;
+-(void) deleteEntity;
 
 @end
