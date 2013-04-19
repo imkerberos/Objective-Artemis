@@ -1,0 +1,9 @@
+.idea/workspace.xml
+
+*.xcodeproj/xcuserdata/*
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+
+build
+
+Thumbs.db
+.DS_Store
