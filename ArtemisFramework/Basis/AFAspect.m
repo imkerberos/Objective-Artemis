@@ -8,9 +8,33 @@
 
 #import "AFAspect.h"
 
+@interface AFAspect ()
+{
+    NSMutableIndexSet* _allSet;
+    NSMutableIndexSet* _excludeSet;
+    NSMutableIndexSet* _oneSet;
+}
+@end
 
 @implementation AFAspect
-{
 
+- (id) init
+{
+    if (self = [super init]) {
+        _allSet = [[NSMutableIndexSet alloc] init];
+        _excludeSet = [[NSMutableIndexSet alloc] init];
+        _oneSet = [[NSMutableIndexSet alloc] init];
+    }
+    
+    return self;
 }
+
+- (void) dealloc
+{
+    [_allSet release];
+    [_excludeSet release];
+    [_oneSet release];
+    [super dealloc];
+}
+
 @end

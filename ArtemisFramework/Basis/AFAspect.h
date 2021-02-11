@@ -10,4 +10,12 @@
 
 
 @interface AFAspect : NSObject
++ (AFAspect*) aspect;
++ (AFAspect*) aspectWithAll: (Class) compoClass1, ...;
++ (AFAspect*) aspectWithExlude: (Class) compoClass1, ...;
++ (AFAspect*) aspectWithOne: (Class) compoClass1, ...;
+
+- (void) allWith: (Class) compoClass1, ...;
+- (void) excludeWith: (Class) compoClass1, ...;
+- (void) oneWith: (Class) compoClass1, ...;
 @end
